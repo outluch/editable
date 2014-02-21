@@ -63,7 +63,6 @@ Editable.prototype.onKeydown = function (event) {
 }
 
 Editable.prototype.onBlur = function () {
-    this.el.removeAttribute('contentEditable');
     if (this.content !== this.el.innerHTML) {
         this.content = this.el.innerHTML;
         this.emit('done', this.content);
